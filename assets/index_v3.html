@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <title>避难所中继器</title>
+  <title>Page Sandbox</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
   <base target="_blank">
@@ -27,7 +27,7 @@
     }
   </style>
 </head>
-<body>
+<body> 
   <div class="box">
     <input id="txtURL" type="text" value="www.google.com" autofocus>
   </div>
@@ -41,6 +41,29 @@
   <div class="box" id="list">
   </div>
   <script>
+    function password()
+    {
+        var testV = 1;
+        var pass1 = prompt('请输入密码:','');
+        while (testV < 3) 
+        {
+            if (!pass1)
+            history.go(-1); 
+            if (pass1 == "123")
+            {
+                alert('密码正确!');
+                break;
+            }
+            testV+=1;
+            var pass1 =
+            prompt('密码错误!请重新输入:');    
+        }
+        if (pass1!="password" & testV ==3)
+        history.go(-1);
+        return " ";
+    }
+    document.write(password());
+                
     const PAGE_CONF_SET = 110
     const PAGE_CONF_GET = 111
 
@@ -163,6 +186,17 @@
       }
       updateSelected()
     }
-  </script>   
+  </script>
 </body>
 </html>
+© 2020 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
